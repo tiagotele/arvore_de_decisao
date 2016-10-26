@@ -87,11 +87,10 @@ def montaArvore(rows,pontuacao=entropia):
     return noArvore(resultados=contabilizaUltimaColuna(rows))
 
 def mostraArvore(arvore,indent=''):
-    if arvore.resultados!=None:
-        print str(arvore.resultados)
-    else:
-        print(str(arvore.col)+':'+str(arvore.valor)+'? ')
-        print indent+'P',
+    if arvore.resultados==None:
+        print "[",arvore.valor,"]"
+        print indent,
         mostraArvore(arvore.tb,indent+'  ')
-        print indent+'N',
+        print indent,
         mostraArvore(arvore.fb,indent+'  ')
+        

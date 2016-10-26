@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+#encoding:utf8
 class noArvore:
   def __init__(self,col=-1,valor=None,resultados=None,tb=None,fb=None):
     self.col=col
